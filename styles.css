@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFFFFF;
+    color: #333333;
+    line-height: 1.6;
+    font-family: 'Helvetica', sans-serif;
+    overflow-x: hidden;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #666666;
+    transform: scale(1.2);
+}
+
+.search-icon::before { content: "\f002"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.profile-icon::before { content: "\f007"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.bag-icon::before { content: "\f290"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #FFFFFF;
+}
+
+.hero h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666666;
+}
+
+.products {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.product-card h3 {
+    padding: 1rem;
+    font-family: 'Georgia', serif;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.product-card .price {
+    padding: 0 1rem 1rem;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.icon-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #F5F5F5, #E0E0E0);
+    position: relative;
+    overflow: hidden;
+}
+
+.hoodie-icon, .sweatpants-icon {
+    transition: transform 0.1s ease-out;
+    animation: float 5s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotateZ(0deg); }
+    25% { transform: translateY(-15px) rotateZ(5deg); }
+    50% { transform: translateY(0) rotateZ(-5deg); }
+    75% { transform: translateY(15px) rotateZ(3deg); }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 2000;
+}
+
+.modal-content {
+    background-color: #FFFFFF;
+    margin: 15% auto;
+    padding: 2rem;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-content h2 {
+    font-family: 'Georgia', serif;
+    margin-bottom: 1rem;
+}
+
+.modal-content button {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #333333;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666666;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 0 1rem;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .product-card {
+        height: 350px;
+    }
+    .hoodie-icon, .sweatpants-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
