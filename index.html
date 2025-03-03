@@ -3,80 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JUMAYZA - DROP ZONE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="./styles.css">
+    <title>JUMAYZA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="nav-container">
-        <div class="logo glitch" data-text="JUMAYZA">JUMAYZA</div>
-        <ul>
-            <li><a href="#search" class="nav-icon"><i class="fas fa-search"></i></a></li>
-            <li><a href="#profile" class="nav-icon"><i class="fas fa-user"></i></a></li>
-            <li><a href="#bag" class="nav-icon"><i class="fas fa-shopping-bag"></i></a></li>
-        </ul>
-    </nav>
-    <header class="hero">
-        <div class="hero-content">
-            <h1 class="glitch" data-text="DROP ZONE">DROP ZONE</h1>
-            <p class="tagline">STREETWEAR EVOLVED</p>
-            <div class="particles"></div>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-content">
+            <p>NEW DROP COMING SOON: <span id="countdown">00:00:00</span></p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#shop">SHOP</a></li>
+                    <li><a href="#lookbook">LOOKBOOK</a></li>
+                    <li class="logo"><a href="/"><img src="images/jumayza-logo.png" alt="JUMAYZA"></a></li>
+                    <li><a href="#news">NEWS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#search"><i class="fas fa-search"></i></a>
+                <a href="#account"><i class="fas fa-user"></i></a>
+                <a href="#cart" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            </div>
         </div>
     </header>
-    <section class="products">
-        <div class="product-card" data-name="Black Fleece Sweatpants" data-price="$65.00" data-desc="Heavyweight. Stealth. Unmatched.">
-            <div class="product-visual">
-                <div class="timer" data-deadline="2025-03-10T00:00:00Z"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slide current">
+                <div class="slide-content">
+                    <h1>SS25 COLLECTION</h1>
+                    <a href="#shop-now" class="cta-button">SHOP NOW</a>
+                </div>
             </div>
-            <div class="product-info">
-                <h3>BLACK FLEECE SWEATPANTS</h3>
-                <p class="price">$65.00</p>
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>EXCLUSIVE DROPS</h1>
+                    <a href="#shop-now" class="cta-button">DISCOVER</a>
+                </div>
             </div>
-        </div>
-        <div class="product-card" data-name="Black Pull Over Hoodie" data-price="$60.00" data-desc="Dark vibes. Premium cut.">
-            <div class="product-visual">
-                <div class="timer" data-deadline="2025-03-10T00:00:00Z"></div>
-            </div>
-            <div class="product-info">
-                <h3>BLACK PULL OVER HOODIE</h3>
-                <p class="price">$60.00</p>
-            </div>
-        </div>
-        <div class="product-card" data-name="Grey Fleece Sweatpants" data-price="$65.00" data-desc="Ghost mode. Soft flex.">
-            <div class="product-visual">
-                <div class="timer" data-deadline="2025-03-10T00:00:00Z"></div>
-            </div>
-            <div class="product-info">
-                <h3>GREY FLEECE SWEATPANTS</h3>
-                <p class="price">$65.00</p>
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>LIMITED EDITION</h1>
+                    <a href="#shop-now" class="cta-button">EXPLORE</a>
+                </div>
             </div>
         </div>
-        <div class="product-card" data-name="Grey Pull Over Hoodie" data-price="$60.00" data-desc="Layered heat. Street ready.">
-            <div class="product-visual">
-                <div class="timer" data-deadline="2025-03-10T00:00:00Z"></div>
+        <div class="slider-controls">
+            <button id="prev"><i class="fas fa-chevron-left"></i></button>
+            <button id="next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Featured Collection -->
+    <section class="featured-collection">
+        <h2 class="section-title">FEATURED</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/product1.jpg" alt="Product 1">
+                    <div class="product-overlay">
+                        <a href="#view-product" class="view-button">VIEW</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">JUMAYZA LOGO TEE</h3>
+                    <p class="product-price">$120</p>
+                </div>
             </div>
-            <div class="product-info">
-                <h3>GREY PULL OVER HOODIE</h3>
-                <p class="price">$60.00</p>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/product2.jpg" alt="Product 2">
+                    <div class="product-overlay">
+                        <a href="#view-product" class="view-button">VIEW</a>
+                    </div>
+                    <div class="sold-out-badge">SOLD OUT</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">SIGNATURE HOODIE</h3>
+                    <p class="product-price">$220</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/product3.jpg" alt="Product 3">
+                    <div class="product-overlay">
+                        <a href="#view-product" class="view-button">VIEW</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">PREMIUM DENIM</h3>
+                    <p class="product-price">$180</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/product4.jpg" alt="Product 4">
+                    <div class="product-overlay">
+                        <a href="#view-product" class="view-button">VIEW</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">URBAN JACKET</h3>
+                    <p class="product-price">$280</p>
+                </div>
+            </div>
+        </div>
+        <div class="view-all-container">
+            <a href="#view-all" class="view-all-button">VIEW ALL</a>
+        </div>
+    </section>
+
+    <!-- Lookbook Preview -->
+    <section class="lookbook-preview">
+        <h2 class="section-title">LOOKBOOK</h2>
+        <div class="lookbook-grid">
+            <div class="lookbook-item large">
+                <img src="images/lookbook1.jpg" alt="Lookbook 1">
+                <div class="lookbook-overlay">
+                    <h3>SPRING 2025</h3>
+                </div>
+            </div>
+            <div class="lookbook-item">
+                <img src="images/lookbook2.jpg" alt="Lookbook 2">
+                <div class="lookbook-overlay">
+                    <h3>STREET SERIES</h3>
+                </div>
+            </div>
+            <div class="lookbook-item">
+                <img src="images/lookbook3.jpg" alt="Lookbook 3">
+                <div class="lookbook-overlay">
+                    <h3>URBAN VIBES</h3>
+                </div>
             </div>
         </div>
     </section>
-    <div class="modal" id="productModal">
-        <div class="modal-content">
-            <span class="close-btn">×</span>
-            <h2 id="modalName"></h2>
-            <p id="modalPrice"></p>
-            <p id="modalDesc"></p>
-            <button>SECURE DROP</button>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <h2 class="section-title">GET NOTIFIED</h2>
+            <p>Sign up to be the first to know about drops and exclusive offers.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="YOUR EMAIL" required>
+                <button type="submit">SUBSCRIBE</button>
+            </form>
         </div>
-    </div>
-    <footer>
-        <div class="ticker">
-            <span>JUMAYZA • STREET DOMINATION • 2025 DROP • HYPE UNLEASHED • JUMAYZA • STREET DOMINATION • 2025 DROP • HYPE UNLEASHED</span>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/jumayza-logo.png" alt="JUMAYZA">
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>SHOP</h3>
+                    <ul>
+                        <li><a href="#new-arrivals">New Arrivals</a></li>
+                        <li><a href="#bestsellers">Bestsellers</a></li>
+                        <li><a href="#collections">Collections</a></li>
+                        <li><a href="#sale">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>INFO</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#stores">Stores</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>HELP</h3>
+                    <ul>
+                        <li><a href="#shipping">Shipping</a></li>
+                        <li><a href="#returns">Returns</a></li>
+                        <li><a href="#sizing">Sizing</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>FOLLOW US</h3>
+                    <div class="social-icons">
+                        <a href="#instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 JUMAYZA. All Rights Reserved.</p>
         </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
-    <script src="./scripts.js"></script>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-header">
+            <div class="close-menu" id="close-menu">×</div>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#shop">SHOP</a></li>
+            <li><a href="#lookbook">LOOKBOOK</a></li>
+            <li><a href="#news">NEWS</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#account">ACCOUNT</a></li>
+        </ul>
+        <div class="mobile-nav-footer">
+            <div class="social-icons">
+                <a href="#instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
