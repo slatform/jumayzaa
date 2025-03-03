@@ -3,44 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jumayza - Drop Ready</title>
-    <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Oswald:wght@700&family=Helvetica&display=swap" rel="stylesheet">
+    <title>JUMAYZA - DROP ZONE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">JUMAYZA</div>
+    <nav class="nav-container">
+        <div class="logo glitch" data-text="JUMAYZA">JUMAYZA</div>
         <ul>
-            <li><a href="#search"><i class="search-icon"></i></a></li>
-            <li><a href="#profile"><i class="profile-icon"></i></a></li>
-            <li><a href="#bag"><i class="bag-icon"></i></a></li>
+            <li><a href="#search" class="nav-icon"><i class="fas fa-search"></i></a></li>
+            <li><a href="#profile" class="nav-icon"><i class="fas fa-user"></i></a></li>
+            <li><a href="#bag" class="nav-icon"><i class="fas fa-shopping-bag"></i></a></li>
         </ul>
     </nav>
-    <div class="hero">
-        <h1>DROP READY</h1>
-        <p>Elevate Your Street Game</p>
-    </div>
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="DROP ZONE">DROP ZONE</h1>
+            <p class="tagline">STREETWEAR EVOLVED</p>
+            <div class="particles"></div>
+        </div>
+    </header>
     <section class="products">
-        <div class="product-card" data-name="Black Fleece Sweatpants" data-price="$65.00" data-desc="Heavyweight fleece, built for the streets.">
-            <div class="product-placeholder"></div>
-            <h3>Black Fleece Sweatpants</h3>
-            <p class="price">$65.00</p>
+        <div class="product-card" data-name="Black Fleece Sweatpants" data-price="$65.00" data-desc="Heavyweight. Stealth. Unmatched.">
+            <div class="product-visual">
+                <div class="timer" data-deadline="2025-03-10T00:00:00Z"></div>
+            </div>
+            <div class="product-info">
+                <h3>BLACK FLEECE SWEATPANTS</h3>
+                <p class="price">$65.00</p>
+            </div>
         </div>
-        <div class="product-card" data-name="Black Pull Over Hoodie" data-price="$60.00" data-desc="Classic pullover, premium vibe.">
-            <div class="product-placeholder"></div>
-            <h3>Black Pull Over Hoodie</h3>
-            <p class="price">$60.00</p>
+        <div class="product-card" data-name="Black Pull Over Hoodie" data-price="$60.00" data-desc="Dark vibes. Premium cut.">
+            <div class="product-visual">
+                <div class="timer" data-deadline="2025-03-10T00:00:00Z"></div>
+            </div>
+            <div class="product-info">
+                <h3>BLACK PULL OVER HOODIE</h3>
+                <p class="price">$60.00</p>
+            </div>
         </div>
-        <div class="product-card" data-name="Grey Fleece Sweatpants" data-price="$65.00" data-desc="Soft fleece, greyed-out flex.">
-            <div class="product-placeholder"></div>
-            <h3>Grey Fleece Sweatpants</h3>
-            <p class="price">$65.00</p>
+        <div class="product-card" data-name="Grey Fleece Sweatpants" data-price="$65.00" data-desc="Ghost mode. Soft flex.">
+            <div class="product-visual">
+                <div class="timer" data-deadline="2025-03-10T00:00:00Z"></div>
+            </div>
+            <div class="product-info">
+                <h3>GREY FLEECE SWEATPANTS</h3>
+                <p class="price">$65.00</p>
+            </div>
         </div>
-        <div class="product-card" data-name="Grey Pull Over Hoodie" data-price="$60.00" data-desc="Layer up, stand out.">
-            <div class="product-placeholder"></div>
-            <h3>Grey Pull Over Hoodie</h3>
-            <p class="price">$60.00</p>
+        <div class="product-card" data-name="Grey Pull Over Hoodie" data-price="$60.00" data-desc="Layered heat. Street ready.">
+            <div class="product-visual">
+                <div class="timer" data-deadline="2025-03-10T00:00:00Z"></div>
+            </div>
+            <div class="product-info">
+                <h3>GREY PULL OVER HOODIE</h3>
+                <p class="price">$60.00</p>
+            </div>
         </div>
     </section>
     <div class="modal" id="productModal">
@@ -49,12 +68,15 @@
             <h2 id="modalName"></h2>
             <p id="modalPrice"></p>
             <p id="modalDesc"></p>
-            <button>ADD TO CART</button>
+            <button>SECURE DROP</button>
         </div>
     </div>
     <footer>
-        <p>© 2025 JUMAYZA. ALL RIGHTS RESERVED.</p>
+        <div class="ticker">
+            <span>JUMAYZA • STREET DOMINATION • 2025 DROP • HYPE UNLEASHED • JUMAYZA • STREET DOMINATION • 2025 DROP • HYPE UNLEASHED</span>
+        </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
     <script src="./scripts.js"></script>
 </body>
 </html>
